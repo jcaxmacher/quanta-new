@@ -4,8 +4,11 @@
   "dependencies": {
     "yyx990803/vue": "*"
   },
+  "paths": ["my-components"],
   "main": "src/main.js",
+  "local": ["date-component"],
   "scripts": [
-    "src/main.js"
+    "src/main.js",
+    "src/components.js"
   ]
 }

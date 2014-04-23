@@ -6,10 +6,18 @@
     </head>
     <body>
         <h1>{{msg}}</h1>
+        <h3>Add a log entry</h3>
+        <select v-model="newType">
+            <option v-repeat="logTypes" v-attr="value: name" v-text="name"></option>
+        </select>
+        <button v-on="click: newLog">Go</button>
+        <div v-if="showForm">
+            <h4 v-text="currentName"></h4>
+            <div v-repeat="currentFields">
+                <label>{{ $value }}: <input v-model="currentValues[$value]" type="text"></label>
+            </div>
+            <button v-on="click: addLog">Add</button>
+        </div>
         <script src="build/build.js"></script>
-        <script>
-            var app = require('quanta');
-            app();
-        </script>
     </body>
 </html>
