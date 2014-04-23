@@ -1,0 +1,20 @@
+<body>
+    <time-component v-with="time: time"></time-component>
+
+    <script src="build/build.js"></script>
+    <script>
+        var Vue = require('vue');
+        window.v = new Vue({
+            el: 'body',
+            data: {
+                time: {
+                    hour: (new Date()).getHours(),
+                    minute: (new Date()).getMinutes()
+                }
+            },
+            components: {
+                'time-component': require('time-component')
+            }
+        });
+    </script>
+</body>

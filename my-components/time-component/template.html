@@ -1,0 +1,8 @@
+<select v-model="hour">
+    <option v-repeat="hours" v-attr="value: $value">{{ $value | numberFilter }}</option>
+</select>:<select v-model="minute">
+    <option v-repeat="minutes" v-attr="value: $value">{{ $value | numberFilter }}</option>
+</select>
+<select v-model="period">
+    <option v-repeat="periods" v-attr="value: $value">{{ $value }}</option>
+</select>

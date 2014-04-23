@@ -1,0 +1,20 @@
+{
+  "name": "time-component",
+  "repo": "obsoleter/time-component",
+  "description": "A Vue.js time selector component",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {
+    "yyx990803/vue": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "time-component.css"
+  ]
+}
