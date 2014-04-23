@@ -1,0 +1,1 @@
+module.exports = '<div><button v-on="click: toggleCal" v-style="border-style: open ? \'inset\' : \'outset\'">{{ date | showDate }}</button><content></content></div>\n';

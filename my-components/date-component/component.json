@@ -1,0 +1,22 @@
+{
+  "name": "date-component",
+  "repo": "obsoleter/date-component",
+  "description": "date selector component",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/calendar": "*",
+    "component/aurora-calendar": "*",
+    "yyx990803/vue": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "date-component.css"
+  ]
+}

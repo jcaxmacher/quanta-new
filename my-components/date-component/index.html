@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build/build.css">
+</head>
+<body>
+
+    <date-selector v-with="date: firstDate">Hi!!!</date-selector>
+    <date-selector v-with="date: secondDate"><dc-comp></dc-comp></date-selector>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem nulla, aliquet a gravida eu, congue lacinia neque. Aenean lobortis porttitor diam quis dignissim. Sed mattis, nisi et ultricies fermentum, libero arcu accumsan nunc, sed scelerisque lacus ipsum vel velit. Pellentesque id commodo augue, sit amet mattis mi. Vivamus quis vestibulum urna. Vestibulum quis sem diam. Fusce vestibulum erat eu felis aliquam volutpat. Sed cursus fermentum tellus. In nec odio ligula. Nunc id ullamcorper tortor, non varius diam.</p>
+
+    <script src="build/build.js"></script>
+    <script>
+    var Vue = require('vue');
+    var comp = Vue.extend({
+        template: '<span v-with="taste: tasty">{{ taste }}</span>'
+    });
+
+    window.v = new Vue({
+        el: 'body',
+        data: {
+            tasty: "it's not to my taste",
+            firstDate: {
+                month: 3,
+                day: 3,
+                year: 2011
+            },
+            secondDate: {
+                month: (new Date()).getMonth(),
+                day: (new Date()).getDate(),
+                year: (new Date()).getFullYear()
+            }
+        },
+        components: {
+            'date-selector': Vue.extend(require('date-component')),
+            'dc-comp': comp
+        }
+    });
+    </script>
+</body>
+</html>
