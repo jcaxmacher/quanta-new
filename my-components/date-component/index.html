@@ -7,7 +7,7 @@
 <body>
 
     <date-selector v-with="date: firstDate">Hi!!!</date-selector>
-    <date-selector v-with="date: secondDate"><dc-comp></dc-comp></date-selector>
+    <date-selector v-with="date: secondDate"><dc-comp v-with="taste: tasty"></dc-comp></date-selector>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem nulla, aliquet a gravida eu, congue lacinia neque. Aenean lobortis porttitor diam quis dignissim. Sed mattis, nisi et ultricies fermentum, libero arcu accumsan nunc, sed scelerisque lacus ipsum vel velit. Pellentesque id commodo augue, sit amet mattis mi. Vivamus quis vestibulum urna. Vestibulum quis sem diam. Fusce vestibulum erat eu felis aliquam volutpat. Sed cursus fermentum tellus. In nec odio ligula. Nunc id ullamcorper tortor, non varius diam.</p>
 
@@ -15,13 +15,17 @@
     <script>
     var Vue = require('vue');
     var comp = Vue.extend({
-        template: '<span v-with="taste: tasty">{{ taste }}</span>'
+template: '<ul><li v-repeat="taste">{{ text }}</li></ul>'
     });
 
     window.v = new Vue({
         el: 'body',
         data: {
-            tasty: "it's not to my taste",
+tasty: [{
+text: "it's not to my taste",
+},{
+text: "it's to mine"
+}],
             firstDate: {
                 month: 3,
                 day: 3,

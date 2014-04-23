@@ -6,10 +6,11 @@
   "keywords": [],
   "dependencies": {
     "component/calendar": "*",
-    "component/aurora-calendar": "*",
+    "component/aurora-calendar": "*"
+  },
+  "development": {
     "yyx990803/vue": "*"
   },
-  "development": {},
   "license": "MIT",
   "main": "index.js",
   "scripts": [
